@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rocket Launch Animation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .launch-scene {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: white !important;
+      animation: skyToSpace 2s ease-in-out forwards 1s, spaceToSky 2s ease-in-out forwards 15s;
+    }
+
+    .space-bg {
+      background: url('assets/space.jpg') center center no-repeat;
+      background-size: cover;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      animation: fadeIn 1s ease-in-out forwards 1s, fadeOut 1s ease-in-out forwards 10s;
+    }
+
+    .earth {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      width: 40%;
+      z-index: 3;
+      animation: fadeIn 1s ease-in-out forwards 1s,
+                 rotateEarth 5s linear 2s infinite,
+                 earthDown 5s ease-in-out forwards 3s,
+                 fadeOut 1s ease-in-out forwards 10s;
+    }
+
+    .rocket {
+      position: absolute;
+      bottom:100px;
+      left: 5%;
+      background: transparent;
+      mix-blend-mode: lighten;
+      opacity: 0;
+      width: 30%;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out forwards 3s,
+                 launchRocket 6s ease-in-out forwards 4s,
+                 fadeOut 1s ease-in-out forwards 14s;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; }
+    }
+
+    @keyframes skyToSpace {
+      to { background: black; }
+    }
+
+    @keyframes spaceToSky {
+      from { background: black; }
+      to { background:white; }
+    }
+
+    @keyframes rotateEarth {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(50deg); }
+    }
+
+    @keyframes earthDown {
+      0% { bottom: 0; }
+      100% { bottom: -400px; }
+    }
+
+    @keyframes launchRocket {
+      0% { bottom: 100px; }
+      100% { bottom: 800px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="launch-scene">
+    <div class="space-bg"></div>
+    <img class="earth" src="assets/earth.png" alt="Earth" />
+    <img class="rocket" src="assets/rocket.gif" alt="Rocket" />
+  </div>
+
+</body>
+</html>
