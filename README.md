@@ -1,4 +1,4 @@
-## 🎓 Final Project: SpaceX Launch Success Prediction
+## 🎓 SpaceX Launch Success Prediction
 
 This project was developed as part of our Artificial Neural Networks (ANN) semester course. It uses TensorFlow to build a neural network that predicts whether a SpaceX launch will succeed based on input features including payload, weather data, and launch conditions.
 
