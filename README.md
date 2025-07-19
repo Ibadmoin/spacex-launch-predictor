@@ -23,4 +23,4 @@ This project was developed as part of our Artificial Neural Networks (ANN) semes
 - Pandas, NumPy  
 - Streamlit (for deployment)
 
-📁 Stay tuned for our deployment and full code in this repo!
+📁 Stay tuned for our deployment and full code in this repo!!

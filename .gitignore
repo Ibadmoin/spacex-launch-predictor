@@ -1,0 +1,51 @@
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Streamlit config files (optional if personal)
+.streamlit/
+
+# Ignore model and preprocessor files (optional if large or generated)
+*.joblib
+*.pkl
+*.h5
+
+# Ignore data files (optional if local only)
+data/*.csv
+data/*.xlsx
+
+# Ignore system/IDE/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore compiled C extensions
+*.out
+*.o
+*.a
+*.dylib
+*.dll
+
+# Ignore HTML preview files (optional)
+*.html
+
+# Ignore temporary files
+*.bak
+*.tmp
+~$*
